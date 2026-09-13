@@ -1,4 +1,4 @@
-const CACHE='luckymouse-v3-iconfix-8';
+const CACHE='luckymouse-v6-super-14';
 self.addEventListener('install',e=>{
   self.skipWaiting();
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['/','/index.html','/icon.png','/icon-192.png','/icon-maskable.png','/manifest.json'])));
@@ -8,5 +8,5 @@ self.addEventListener('activate',e=>{
   self.clients.claim();
 });
 self.addEventListener('fetch',e=>{
-  e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(res=>{return res})));
+  e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));
 });

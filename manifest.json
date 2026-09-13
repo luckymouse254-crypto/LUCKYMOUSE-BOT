@@ -1,7 +1,7 @@
 {
-  "name": "LuckyMouse Studio V3",
-  "short_name": "LuckyMouse",
-  "description": "Turn quotes into viral videos - Dark aesthetic studio for creators",
+  "name": "LuckyMouse Studio V6 - Super Edition",
+  "short_name": "LuckyMouse V6",
+  "description": "V4 Social + V5 AI + V6 Templates - All in One Super Studio with Kiswahili quotes",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
