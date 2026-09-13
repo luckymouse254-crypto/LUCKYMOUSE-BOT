@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuckyMouse Bot</title>
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo-wrap">
+        <img src="icon.png" class="logo" />
+        <div>
+          <h1>LuckyMouse Bot</h1>
+          <span class="badge">V1 Foundation</span>
+        </div>
+      </div>
+      <p class="tagline">Generate aesthetic quote cards. No paid API needed.</p>
+    </header>
+    <div class="top-actions">
+      <button id="soundBtn" class="pill">Ambient: OFF</button>
+      <button id="surpriseBtn" class="pill primary">Surprise Me</button>
+    </div>
+    <div class="card-wrap">
+      <div id="quoteCard" class="quote-card style-aesthetic">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <span id="categoryBadge" class="category-badge">LOVE</span>
+          <p id="quoteText">Click Generate to get your lucky quote.</p>
+          <span class="author">- LuckyMouse</span>
+        </div>
+        <img src="icon.png" class="watermark" />
+      </div>
+    </div>
+    <div class="controls">
+      <button id="generateBtn" class="btn big">Generate Quote</button>
+      <div class="row">
+        <button id="copyBtn" class="btn">Copy</button>
+        <button id="saveBtn" class="btn">Save Image</button>
+        <button id="favBtn" class="btn">Favorite</button>
+      </div>
+    </div>
+    <section class="section">
+      <h3>Visual Style</h3>
+      <div class="styles">
+        <button data-style="aesthetic" class="style-btn active">Aesthetic Dark</button>
+        <button data-style="neon" class="style-btn">Neon Glow</button>
+        <button data-style="paper" class="style-btn">Paper Dream</button>
+        <button data-style="gradient" class="style-btn">Gradient Pop</button>
+        <button data-style="minimal" class="style-btn">Minimal</button>
+      </div>
+    </section>
+    <section class="section">
+      <h3>Categories</h3>
+      <div id="categoryGroups"></div>
+    </section>
+    <section class="section split">
+      <div><h4>History</h4><ul id="historyList" class="mini-list"></ul></div>
+      <div><h4>Favorites</h4><ul id="favList" class="mini-list"></ul></div>
+    </section>
+    <footer class="footer">PWA Ready - GitHub + Vercel Ready</footer>
+  </div>
+  <canvas id="exportCanvas" width="1080" height="1350" style="display:none"></canvas>
+  <script src="quotes.js"></script>
+  <script src="app.js"></script>
+  <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js');}</script>
+</body>
+</html>
